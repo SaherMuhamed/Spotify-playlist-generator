@@ -6,8 +6,8 @@ from spotipy.oauth2 import SpotifyOAuth
 user_date_choice = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD: ")
 website_url = f"https://www.billboard.com/charts/hot-100/{user_date_choice}/"
 
-CLIENT_ID = "3c101a62fd854a76a94e622a7941137f"
-CLIENT_SECRET = "33caf15113e646ecaa67986ce94f3f89"
+CLIENT_ID = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+CLIENT_SECRET = "XXXXXXXXXXXXXXXXXXXXXXXXX"
 
 response = requests.get(url=website_url)
 
@@ -25,9 +25,9 @@ songs = songs_title[::-1]
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-private",
-        redirect_uri="https://example.com/",
-        client_id=CLIENT_ID,
-        client_secret=CLIENT_SECRET,
+        redirect_uri="http://example.com",
+        client_id=YOUR UNIQUE CLIENT ID,
+        client_secret= YOUR UNIQUE CLIENT SECRET,
         show_dialog=True,
         cache_path="token.txt"
     )
